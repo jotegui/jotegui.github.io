@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="jotegui">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,59 +12,61 @@
     <title>Coming soon...</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="static/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/lib/bootstrap.min.css" rel="stylesheet">
     
     <!-- FontAwesome icons -->
-    <link href="static/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/lib/font-awesome.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="static/cover.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
 
   </head>
 
-  <body>
+  <body ng-controller="MainController as mainCtrl">
 
-    <div class="site-wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Javier Otegui</a>
+        </div>
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand"><a target="_blank" href="http://about.me/jotegui">Javier Otegui</a></h3>
-              <nav>
-                <ul class="nav masthead-nav">
+        <div id="navbar" class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
                   <li><a target="_blank" href="http://es.linkedin.com/in/jotegui"><i class="fa fa-linkedin"></i></a></li>
                   <li><a target="_blank" href="http://www.twitter.com/jotegui"><i class="fa fa-twitter"></i></a></li>
                   <li><a target="_blank" href="http://www.github.com/jotegui"><i class="fa fa-github-alt"></i></a></li>
                   <li><a href="mailto:javier.otegui@gmail.com"><i class="fa fa-envelope"></i></a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
+          </ul>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Coming soon...</h1>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>Shamelessly based on "Cover" template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div>
-
-        </div>
-
+        </div><!--/.nav-collapse -->
+      
       </div>
+    </nav>
+
+    <div class="container">
+
+      <h1 class="jumbotron text-center">Coming {{mainCtrl.when}}...</h1>
 
     </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="static/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+    <script src="static/js/lib/jquery.min.js"></script>
+    <script src="static/js/lib/bootstrap.min.js"></script>
+    
+    <!--AngularJS-->
+    <script src="static/js/lib/angular.min.js"></script>
+    <script src="static/js/app.js"></script>
+    <script src="static/js/controllers.js"></script>
   </body>
 </html>
 
